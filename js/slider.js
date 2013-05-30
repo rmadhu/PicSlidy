@@ -19,7 +19,8 @@ function fillCanvas(){
     context.drawImage(images[step], 0, 0)
     if(images.length>1){
         var disableNextButton = document.getElementById("buttonNext");
-        disableNextButton.style.visibility="visible";
+        disableNextButton.disabled=false;
+        disableNextButton.className="button enabled";
     }
     playSlideShow();
 
@@ -35,12 +36,14 @@ function nextImage(){
     if(step>=images.length-1)
     {
         var disableNextButton = document.getElementById("buttonNext");
-        disableNextButton.style.visibility="hidden";
+        disableNextButton.disabled=true;
+        disableNextButton.className="button disabled";
     }
     context.drawImage(images[step], 0, 0);
     if(step>0){
         var disablePrevButton = document.getElementById("buttonBack");
-        disablePrevButton.style.visibility="visible";
+        disablePrevButton.disabled=false;
+        disablePrevButton.className="button enabled";
     }
 }
 
@@ -55,16 +58,19 @@ function prevImage(){
     if(step>=1)
     {
         var disablePrevButton = document.getElementById("buttonBack");
-        disablePrevButton.style.visibility="visible";
+        disablePrevButton.disabled=false;
+        disablePrevButton.className="button enabled";
         if(step<images.length-1)
         {
             var disableNextButton = document.getElementById("buttonNext");
-            disableNextButton.style.visibility="visible";
+            disableNextButton.disabled=false;
+            disableNextButton.className="button enabled";
         }
     }
     else{
         var disablePrevButton = document.getElementById("buttonBack");
-        disablePrevButton.style.visibility="hidden";
+        disablePrevButton.disabled=true;
+        disablePrevButton.className="button disabled";
     }
 }
 
@@ -92,19 +98,23 @@ function playSlideShow() {
         i=i+1;
         if(i==0){
             var disablePrevButton = document.getElementById("buttonBack");
-            disablePrevButton.style.visibility="hidden";
+            disablePrevButton.disabled=true;
+            disablePrevButton.className="button disabled";
             var disableNextButton = document.getElementById("buttonNext");
-            disableNextButton.style.visibility="visible";
+            disableNextButton.disabled=false;
+            disableNextButton.className="button enabled";
         }
         if(i>=images.length-1)
         {
             var disableNextButton = document.getElementById("buttonNext");
-            disableNextButton.style.visibility="hidden";
+            disableNextButton.disabled=true;
+            disableNextButton.className="button disabled";
         }
         context.drawImage(images[i], 0, 0);
         if(i>0){
             var disablePrevButton = document.getElementById("buttonBack");
-            disablePrevButton.style.visibility="visible";
+            disablePrevButton.disabled=false;
+            disablePrevButton.className="button enabled";
         }
         step=i;
         if(i==images.length-1)  {

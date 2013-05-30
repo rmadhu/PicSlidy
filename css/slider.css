@@ -2,14 +2,14 @@
     background: #FF398C;
     border: 0px solid #AE39FF;
     display:inline-block;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     font: bold 1em/100px;
     text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
     border-bottom: 1px solid rgba(0,0,0,0.5);
     font-family: 'Quando', serif;
     font-stretch: ultra-expanded;
-    box-shadow: 0 2px 0 #1960FF;
+    box-shadow: 0 2px 0 #AEFF19;
     border-radius: 4px;
     background: linear-gradient(top, #1960FF, #1960FF);
     padding: 4px 30px;
@@ -24,21 +24,38 @@
 .button.green:hover{
     background-color: #31B404;
 }     */
-.button.orange:hover{
-    background-color: #1960FF;
+
+.button.enabled {
+    background: #FF398C;
 }
-a.button {
+
+.button.disabled {
+    background: #DDD;
+    color: #585858;
+    box-shadow: 0 2px 0 #DDD;
+}
+
+.button.enabled:hover{
+    background-color: #1960FF;
+    cursor: pointer;
+}
+
+.button {
     text-decoration: none;
 }
- body{
-     background-image: url('../images/bg.jpg') ;
- }
+
+body{
+    background-color: #FFEDFF ;
+}
+
 #banner{
     background: #FF398C;
-    }
+}
+
 div{
     text-align: center;
-    }
+}
+
 h2,h3  {
     text-align: center;
     padding: 10px 10px;
