@@ -74,5 +74,6 @@ h3{
 
 #picCanvas{
     text-align: center;
-    border-radius: 4px;
+    border: 2px #585858;
+    border-radius: 2px;
 }

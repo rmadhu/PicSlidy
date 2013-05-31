@@ -11,7 +11,7 @@
 
     </script>
 </head>
-<body onload="fillCanvas()">
+<body onload="picSlidy.fillCanvas()">
 <div id="banner">
     <h2 id="welcomeLine">
     Welcome to PicSlidy
@@ -20,11 +20,11 @@
 </div>
 
 <div>
-    <button class="button disabled" onclick="prevImage()" id="buttonBack" disabled>Prev</button>
-    <canvas id="picCanvas" width="236" height="320" style="color: #004EFF;">
+    <button class="button disabled" onclick="picSlidy.prevImage()" id="buttonBack" disabled>Prev</button>
+    <canvas id="picCanvas" width="236" height="320" style="border: solid 2px #585858;">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
-    <button class="button enabled" onclick="nextImage()" id="buttonNext" disabled>Next</button>
+    <button class="button enabled" onclick="picSlidy.nextImage()" id="buttonNext" disabled>Next</button>
 </div>
 
 
